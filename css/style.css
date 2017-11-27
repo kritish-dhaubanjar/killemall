@@ -1,0 +1,111 @@
+body{
+	background-color=#000 !important;
+}
+#custom-container-fluid{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+#wrapper{
+  background-image: url(../images/forest.jpg);
+}
+
+#main{
+  background-color: rgba(0,0,0,0.9);
+  color: #fff;
+}
+
+#custom-container-fluid a{
+  color: #fff;
+  padding-right: 14px;
+/*  border-radius: 10px;
+  border-bottom: solid transparent;*/
+}
+#custom-container-fluid a:hover{
+  color: #dedede;
+/*  border-radius: 5px;
+  border-bottom: solid;*/
+}
+
+@media (max-width: 576px) {
+  #custom-container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  } 
+  #little {
+    margin-top: 5px;
+  }
+  #for-center li{
+    text-align:center;
+  }
+}
+
+@media (min-width: 576px){
+  #for-center li{
+    text-align:center;
+  }
+}
+
+@media (min-width: 768px) {
+  #custom-container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  #for-center li{
+    text-align:center;
+  } 
+}
+
+@media (min-width: 992px) {
+  #custom-container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #custom-container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+#little {
+   background-color: rgba(0,0,17,0.4);
+   color: #fff;
+}
+
+#custom-drop a:link{
+   color: #000;
+}
+
+.footer{
+  background-color: rgba(0,0,0,0.95);
+  margin: 0px;
+}
+.footer p{
+  margin: 0px; 
+  color: #fff;
+  padding: 10px 0 10px 30px;
+}
+
+.footer .strike{
+  text-decoration: line-through;
+}
+
+#signup input{
+    background-color: rgba(0,0,0,0.55);
+    color: #fff;
+}
+
+#signin li{
+    list-style-type: none;
+    display: inline-block;
+}
+.display-5 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+#link {
+  padding: 5px;
+}
