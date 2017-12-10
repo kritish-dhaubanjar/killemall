@@ -23,7 +23,7 @@
 				</div>
 
 				<?php 
-				if(is_null($_COOKIE['cookie-id'])){	
+				if(is_null($_SESSION['cookie-id'])){	
 					if(isset($_GET['link'])){	
 						include 'library/templates/jumbo.php';
 					}	
@@ -31,7 +31,7 @@
 						include 'library/templates/fresh.php';
 					}
 				}
-				else if($_COOKIE['cookie-activated']==0){
+				else if($_SESSION['cookie-activated']==0){
 					include 'library/resources/verification.php';
 				}
 				else{

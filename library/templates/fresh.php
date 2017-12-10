@@ -31,7 +31,7 @@
 	</div> 
 
 	<div class="col-lg-6">
-		<img src='././images/forest.jpg' class='img-fluid'><br><br>
+		<img src='././images/irish.jpg' class='img-fluid'><br><br>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<!-- Hell0 -->
 		<ins class="adsbygoogle"

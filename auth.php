@@ -19,12 +19,20 @@
 			}
 			else{
 				$info=mysqli_fetch_assoc($search_run);
-				setcookie('cookie-id',$info['id'],time()+900);
+				
+				$_SESSION['cookie-id'] = $info['id'];
 				$first=str_word_count($info['name'],1,'?');
-				setcookie('cookie-name',$first[0],time()+900);
-				setcookie('cookie-code',$info['code'],time()+900);
-				setcookie('cookie-activated',$info['activated'],time()+900);
-				setcookie('cookie-admin',$info['admin'],time()+900);
+				$_SESSION['cookie-name'] = $first[0];
+				$_SESSION['cookie-code'] = $info['code'];
+				$_SESSION['cookie-activated'] = $info['activated'];
+				$_SESSION['cookie-admin'] = $info['admin'];
+
+				//setcookie('cookie-id',$info['id'],time()+900);
+				//$first=str_word_count($info['name'],1,'?');
+				//setcookie('cookie-name',$first[0],time()+900);
+				//setcookie('cookie-code',$info['code'],time()+900);
+				//setcookie('cookie-activated',$info['activated'],time()+900);
+				//setcookie('cookie-admin',$info['admin'],time()+900);
 				$hits=$info['hits'];
 				$hits++;
 				$update="UPDATE credentials SET hits='$hits', online=1 WHERE username='$username'";
@@ -36,13 +44,14 @@
 		}
 	}
 	else{
-		echo $temp_id=$_COOKIE['cookie-id'];
-		setcookie('cookie-id',$info['id'],time()-900);
-		setcookie('cookie-name',$first[0],time()-900);
-		setcookie('cookie-code',$info['code'],time()-900);
-		setcookie('cookie-activated',$info['activated'],time()-900);	
-		setcookie('cookie-admin',$info['admin'],time()-900);	
-		setcookie('cookie-hits',$info['hits'],time()-900);
+		session_destroy();
+		//echo $temp_id=$_COOKIE['cookie-id'];
+		//setcookie('cookie-id',$info['id'],time()-900);
+		//setcookie('cookie-name',$first[0],time()-900);
+		//setcookie('cookie-code',$info['code'],time()-900);
+		//setcookie('cookie-activated',$info['activated'],time()-900);	
+		//setcookie('cookie-admin',$info['admin'],time()-900);	
+		//setcookie('cookie-hits',$info['hits'],time()-900);
 		$update="UPDATE credentials SET online=0 WHERE id='$temp_id'";
 		mysqli_query($con,$update);		
 	}

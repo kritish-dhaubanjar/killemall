@@ -5,11 +5,14 @@ body{
   font-family: 'Roboto Condensed', sans-serif;
 }
 #wrapper{
-  background-image: url(../images/forest.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(../images/irish.jpg);
 }
 
 #main{
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,0.55);
   color: #fff;
 }
 

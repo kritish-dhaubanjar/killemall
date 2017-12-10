@@ -22,7 +22,7 @@
 			</div>
 
 			<?php
-				if($_COOKIE['cookie-admin']==0){
+				if($_SESSION['cookie-admin']==0){
 			?>
 
 				<div class="jumbotron jumbotron-fluid" style="margin-bottom: 0px; padding-top:100px; padding-bottom: 245px;">

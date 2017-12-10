@@ -145,7 +145,8 @@ Data Communication				DC
 			      <th>Name</th>
 			      <th>Online</th>
 			      <th>Username</th>  
-			      <th>Code</th>        
+			      <th>Code</th>   
+			      <th>Activated</th>      
 			      <th>Hits</th> 
 				  <th>Email</th>      
 				  <th>Admin</th>                        
@@ -153,7 +154,7 @@ Data Communication				DC
 			  </thead>
 			  <tbody>
 			  <?php
-			  	$list="SELECT id, name, email, username, hits, code, online, admin FROM credentials WHERE 1";
+			  	$list="SELECT id, name, email, username, hits, activated, code, online, admin FROM credentials WHERE 1";
 			  	$list_run=mysqli_query($con,$list);
 			  	while($individual=mysqli_fetch_assoc($list_run)){
 			  ?>
@@ -169,6 +170,7 @@ Data Communication				DC
 			      ?></td>        
 			      <td><?php echo $individual['username'];?></td>
 			      <td><?php echo $individual['code'];?></td> 
+			      <td><?php echo $individual['activated'];?></td> 
 			      <td><?php echo $individual['hits'];?></td> 
 			      <td><?php echo $individual['email'];?></td>  
 			      <td><?php 

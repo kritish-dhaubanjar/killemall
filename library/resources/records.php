@@ -23,7 +23,7 @@
 	#Array ( [id] => 2 [title] => [acronym] => MP [sn] => 2 [link] => http://localhost/ACME/acme-free/ )
 	
 	include_once 'database.php';
-	$id=$_COOKIE['cookie-id'];										//	userid
+	$id=$_SESSION['cookie-id'];										//	userid
 
 	function all_in_one($record_table, $column, $category, $id){ 
 		global $con;

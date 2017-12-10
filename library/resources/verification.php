@@ -5,7 +5,7 @@
 	if(isset($_GET['code'])){
 			$in_code=$_GET['code'];
 		if(!empty($_GET['code'])){
-			if($_COOKIE['cookie-code']==$_GET['code']){
+			if($_SESSION['cookie-code']==$_GET['code']){
 				$update="UPDATE credentials SET activated='1' WHERE code='$in_code'";
 				$update_run=mysqli_query($con,$update);
 				$_SESSION['error']='no_error_verify';

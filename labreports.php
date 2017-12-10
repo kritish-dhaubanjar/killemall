@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -8,7 +9,8 @@
 		<?php include 'library/resources/setup.php';?>
 		<?php require 'library/resources/database.php';?>
 		<?php
-			if(is_null($_COOKIE['cookie-id'])){
+			// echo $_SESSION['cookie-id'];
+			if(is_null($_SESSION['cookie-id'])){
 				include 'library/templates/restricted.php';
 				die();
 			}
@@ -38,7 +40,7 @@ Data Communication				DC
 			</div>
 
 			<?php
-				if($_COOKIE['cookie-activated']==0){
+				if($_SESSION['cookie-activated']==0){
 					include 'library/resources/verification.php';
 				}
 				else{ //else		
